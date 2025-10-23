@@ -1,6 +1,16 @@
 class Solution:
     def hIndex(self, citations: List[int]) -> int:
-        citations.sort()
-        for i in range(len(citations)-1, -1, -1):
-            if i <= (len(citations)-1)/2:
-                return i+1
+        n = len(citations)
+        c_counter = [0 for i in range(n+1)]
+
+        for c in citations:
+            if c >= n:
+                c_counter[n] += 1
+            else:
+                c_counter[c] += 1
+        
+        for i in range(n):
+            if sum(c_counter[i:]) < i:
+                return i-1
+
+        
