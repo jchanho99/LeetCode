@@ -7,7 +7,7 @@ left, right 포인터를 설정해서 왔다갔다 한다.
 # Complexity
 - Time complexity: $$O(n)$$, `numbers` array만큼 연산한다.
 
-- Space complexity: $$O(n)$$, 변수 1개만 사용했으니 정확하게는 $$O(n)+O(1)$$이다.
+- Space complexity: $$O(n)$$
 
 # Code
 ```python3 []
